@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <script src="../raphael.js"></script>
+        <script src="../graphael/g.raphael.js"></script>
+        <script src="../graphael/g.line.js"></script>
+        <script>
+            window.onload = function () {
+                var r = Raphael("holder");
+                var s = r.set();
+                s.push(r.g.flower(0, 50, 20),
+                    r.g.disc(50, 50, 20),
+                    r.g.line(100, 50, 20),
+                    r.g.square(150, 50, 20),
+                    r.g.triangle(200, 50, 20),
+                    r.g.star(250, 50, 20),
+                    r.g.cross(300, 50, 20),
+                    r.g.plus(350, 50, 20),
+                    r.g.arrow(400, 50, 20),
+                    r.g.diamond(450, 50, 20));
+                s.attr({fill: "#000", stroke: "none", translation: "100 100"});
+
+                r.path("M30,150l290,0M50,130l0,40 M100,130l0,40 M150,130l0,40 M200,130l0,40 M250,130l0,40 M300,130l0,40").attr({stroke: "#c00", translation: [150.5, 100.5]});
+                s = r.set();
+                s.push(r.g.tag(200, 250, "$9.99", 130),
+                    //r.g.popup(250, 250, "$9.99"),
+                    r.g.popup(250, 250, "$9.99"),
+                    //flag(x, y, text, angle)
+                    r.g.flag(300, 250, "$9.99", 60),
+                    //label(x, y, text)
+                    r.g.label(350, 250, "$9.99"),
+                    //drop(x, y, text, size, angle)
+                    r.g.drop(400, 250, "$10"),
+                    //blob(x, y, text, angle, size)
+                    r.g.blob(450, 250, "$9.99"));
+
+                //r.g.popupit(x, y, set, dir, size)
+
+            };
+        </script>
+    </head>
+    <body>
+        <div id="holder" style="height:640px;"></div>
+
+    </body>
+</html>
