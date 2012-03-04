@@ -22,8 +22,8 @@ def process_dir(data, dir, files):
         else:
             if path.endswith('.py'):
                 txt_path = '%s.txt' % txt_path[:-3]
-            print 'copying %s to %s' % (path, txt_path)
-            shutil.copy(path, txt_path)
+                print 'copying %s to %s' % (path, txt_path)
+                shutil.copy(path, txt_path)
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
