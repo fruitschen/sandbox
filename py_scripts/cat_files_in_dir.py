@@ -10,7 +10,7 @@ def process_dir(data, dir, files):
         path = os.path.join(dir, file)
         if path.endswith('.py'):
             rel_path = path.replace(data['prefix'], '')
-            print '#%s' % (rel_path)
+            print '#%s %s' % (rel_path, '#' * 20)
             print open(path).read()
 
 if __name__ == "__main__":
